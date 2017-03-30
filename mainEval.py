@@ -5,7 +5,7 @@ scoreList = []
 #create class to hold counters
 class Score:
     def __init__(self,id):
-        self.id = id*id
+        self.id = id
         self.pre = 0
         self.rec = 0
         self.f1 = 0
@@ -46,11 +46,12 @@ for i in range(1,inputCount+1,1):
     o.f1 = 2 * ((o.pre * o.rec) / (o.pre + o.rec))
     scoreList.append(o)
 s = 0
+print("ID  =>  F1 Score")
 for i in scoreList:
-
     s += i.f1
     strO = str(i.id) +' =>  ' + str(i.f1)
     print(strO)
 avgFScore = s/len(scoreList)
-print(avgFScore)
+print("\n\nTotal Avg. F1 Score => " + str(avgFScore))
+#print(avgFScore)
 
