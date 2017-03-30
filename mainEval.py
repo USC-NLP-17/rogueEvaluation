@@ -1,6 +1,6 @@
 import fileinput
-ref_folder_location = 'C:\\Users\\amitjha\\Google Drive\\Spring\\NLP\\Project\\corpus\\reference_model\\'
-machine_folder_location = 'C:\\Users\\amitjha\\Google Drive\\Spring\\NLP\\Project\\corpus\\system\\'
+ref_folder_location = 'C:\\Users\\amitjha\\Desktop\\output\\human_output\\'
+machine_folder_location = 'C:\\Users\\amitjha\\Desktop\\output\\machine_output\\'
 scoreList = []
 #create class to hold counters
 class Score:
@@ -20,7 +20,7 @@ def buildList(fileN):
         refSumLine = refSumLine.strip()
         s = s + refSumLine
     s = s.strip('$')
-    listVal = str.split('.')
+    listVal = s.split(u'\u0964')
     return listVal
 
 
